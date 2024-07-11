@@ -41,7 +41,7 @@
   .help-form button {
     width: 100%;
     padding: 10px;
-    background-color: #4caf50;
+    background-color: #007bff ;
     color: white;
     border: none;
     border-radius: 4px;
@@ -51,7 +51,7 @@
   }
   
   .help-form button:hover {
-    background-color: #45a049;
+    background-color: #007bff ;
   }
   h3{
     background-color: #fff;
