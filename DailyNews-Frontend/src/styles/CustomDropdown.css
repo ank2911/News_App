@@ -1,0 +1,9 @@
+.custom-dropdown{
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 55vh;
+    width: 45vh;
+}

@@ -1,0 +1,71 @@
+.register-container {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+    background-color: #f0f0f0;
+
+
+    background-image: url('../assests/img1.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .register-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+    width: 370px;
+  }
+  
+  .register-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .register-form label {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .register-form input[type="text"],
+  .register-form input[type="email"],
+  .register-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .register-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .register-form button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .success-message {
+    color: green;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    margin: 10px 0;
+  }
+  

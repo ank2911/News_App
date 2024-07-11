@@ -1,0 +1,22 @@
+/* About.css */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 91vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+  .footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  }

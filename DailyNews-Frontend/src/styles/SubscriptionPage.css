@@ -1,0 +1,9 @@
+.subscription-page{
+    width: 206vh;
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:xx-large;
+    background-color: beige;
+}

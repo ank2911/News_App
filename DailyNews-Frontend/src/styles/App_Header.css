@@ -1,0 +1,64 @@
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .nav-link {
+    color: #555;
+    margin-right: 15px;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #007bff;
+  }
+  
+  .nav-item.active .nav-link {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .date-item {
+    margin-left: auto;
+    color: #555;
+  }
+  
+  .login-item {
+    margin-left: 20px;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .login-item:hover {
+    color: #0056b3;
+  }
+  
+  .welcome-text {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* logout button */
+  .btn {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .navbar-link{
+    display: flex;
+  }
