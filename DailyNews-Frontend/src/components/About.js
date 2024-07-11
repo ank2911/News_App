@@ -18,13 +18,6 @@ const About = () => {
         </div>
         
       </div>
-
-      {/* Footer */}
-      <footer className="footer bg-dark text-light">
-        <div className="container text-center">
-          <p>Copyright © 2024 Daily News, Tech Mahindra. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 };

@@ -8,45 +8,69 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [retypePassword, setRetypePassword] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [address, setAddress] = useState("");
+<<<<<<< HEAD
   const navigate = useNavigate();
+=======
+  const [passwordsMatch, setPasswordsMatch] = useState(true);
+  const [validPhoneNumber, setValidPhoneNumber] = useState(true);
+>>>>>>> f88cd4eb85d0ae51b1ce32a7211859d152ffea08
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
-  const [passwordsMatch, setPasswordsMatch] = useState(true); // State to track if passwords match
 
   useEffect(() => {
-    // Function to check if passwords match
-    setPasswordsMatch(password === retypePassword);
+    if (retypePassword && password !== retypePassword) {
+      setPasswordsMatch(false);
+    } else {
+      setPasswordsMatch(true);
+    }
   }, [password, retypePassword]);
 
+<<<<<<< HEAD
   const handleLogin= () => {
     navigate("/login");
+=======
+  const validatePhoneNumber = (number) => {
+    return /^\d{10}$/.test(number);
+>>>>>>> f88cd4eb85d0ae51b1ce32a7211859d152ffea08
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!passwordsMatch) {
       setError("Passwords do not match");
       return;
     }
+<<<<<<< HEAD
   
     try  {
+=======
+
+    if (!validatePhoneNumber(phoneNumber)) {
+      setValidPhoneNumber(false);
+      return;
+    }
+
+    try {
+>>>>>>> f88cd4eb85d0ae51b1ce32a7211859d152ffea08
       const response = await axios.post("http://localhost:5000/register", {
         name,
         email,
         password,
+        phoneNumber,
         address,
       });
 
       setSuccess(response.data.message);
-
+      setError("");
       setName("");
       setEmail("");
       setPassword("");
       setRetypePassword("");
+      setPhoneNumber("");
       setAddress("");
-
-      setError(""); // Clear any previous errors
     } catch (error) {
       setError(error.response.data.message);
       setSuccess(""); // Clear any previous success messages
@@ -98,9 +122,25 @@ function Register() {
           onChange={(e) => setRetypePassword(e.target.value)}
           required
         />
-        
-        {/* Display password match status */}
-        {!passwordsMatch && <p style={{ color: 'red' }}>Passwords do not match</p>}
+        {!passwordsMatch && (
+          <p style={{ color: "#dc3545" }}>Passwords do not match</p>
+        )}
+
+        <label htmlFor="phoneNumber">Phone Number:</label>
+        <input
+          type="tel"
+          id="phoneNumber"
+          placeholder="Enter your phone number"
+          value={phoneNumber}
+          onChange={(e) => {
+            setPhoneNumber(e.target.value);
+            setValidPhoneNumber(validatePhoneNumber(e.target.value));
+          }}
+          required
+        />
+        {!validPhoneNumber && (
+          <p className="error-message">Please enter a valid 10-digit phone number</p>
+        )}
 
         <label htmlFor="address">Address:</label>
         <input

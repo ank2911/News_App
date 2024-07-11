@@ -4,6 +4,9 @@ import { Navbar,Container,Form,Button} from "react-bootstrap";
 import { AuthContext } from '../context/AuthContext';
 import  '../styles/App_Header.css'
 
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
 function App_Header() {
 
   const date  = new Date();
@@ -35,8 +38,12 @@ function App_Header() {
               <li className="nav-item">
                 <Link className="nav-link" to="/news">News</Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/about">About</Link>
+              </li> */}
+              
+              <li className="nav-item">
+                <Link className="nav-link" to="/help">Help?</Link>
               </li>
              {
               auth.isAuthenticated && (
@@ -46,7 +53,7 @@ function App_Header() {
                 <Link className="nav-link" to="/subscribe">Subscription</Link>
               </li>
             </ul>
-              <Form className="d-flex">
+              {/* <Form className="d-flex">
             <Form.Control
               style={{width:'55vh'}}
               type="search"
@@ -55,7 +62,7 @@ function App_Header() {
               aria-label="Search"
             />
             <Button variant="outline-success">Search</Button>
-          </Form>
+          </Form> */}
             </div>
               )
              }
@@ -68,8 +75,15 @@ function App_Header() {
           
           {auth.isAuthenticated ? (
             <>
+              {/* <span className="nav-item welcome-text">Welcome, {auth.user?.name}</span>
+              <button className="btn btn-outline-danger" onClick={handleLogout}>Logout</button> */}
               <span className="nav-item welcome-text">Welcome, {auth.user?.name}</span>
-              <button className="btn btn-outline-danger" onClick={handleLogout}>Logout</button>
+              <DropdownButton id="dropdown-basic-button" title="Profile">
+                <Dropdown.Item href="#/">Edit Profile</Dropdown.Item>
+                <Button variant="outline-primary" onClick={handleLogout}>Logout</Button>
+                <Dropdown.Item></Dropdown.Item>
+                <Dropdown.Item></Dropdown.Item>
+              </DropdownButton>
             </>
             
           ) : (

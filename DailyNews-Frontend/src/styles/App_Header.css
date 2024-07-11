@@ -46,7 +46,7 @@
   }
   
   .login-item:hover {
-    color: #0056b3;
+    color: #007bff;
   }
   
   .welcome-text {
@@ -58,6 +58,9 @@
   .btn {
     font-size: 14px;
     margin-left: 10px;
+    color: #007bff;
+    background-color: blue;
+    
   }
   .navbar-link{
     display: flex;
