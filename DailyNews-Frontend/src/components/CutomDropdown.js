@@ -42,9 +42,9 @@ function CustomDropdown() {
             Select Subscription Type
           </Dropdown.Toggle>
           <Dropdown.Menu onClick={()=>setShowDropdown(true)}>
-            <Dropdown.Item eventKey="online">Online - 30 Rs./month</Dropdown.Item>
-            <Dropdown.Item eventKey="hardcopy">Hardcopy - 50 Rs./month</Dropdown.Item>
-            <Dropdown.Item eventKey="both">Both - 65 Rs./month</Dropdown.Item>
+            <Dropdown.Item eventKey="online">Online - ₹30/month</Dropdown.Item>
+            <Dropdown.Item eventKey="hardcopy">Hardcopy - ₹50/month</Dropdown.Item>
+            <Dropdown.Item eventKey="both">Both - ₹65/month</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </Col>
@@ -61,14 +61,14 @@ function CustomDropdown() {
               <Form.Check
                 key={category.name}
                 type="checkbox"
-                label={`${category.name} - ${category.price} Rs.`}
+                label={`${category.name} - ₹${category.price} `}
                 checked={selectedCategories.includes(category)}
                 onChange={() => handleCategoryChange(category)}
               />
             ))}
           </Form.Group>
           <div className="mt-3">
-            <strong>Total Price: {totalPrice} Rs.</strong>
+            <strong>Total Price: ₹{totalPrice} </strong>
           </div>
           <Button variant="primary" className="mt-3">
             Proceed to Payment
