@@ -8,6 +8,7 @@ import Register from './components/Register'
 import AuthProvider from './context/AuthContext';
 import SubscriptionPage from './components/SubscriptionPage';
 import Footer from './components/Footer';
+import Help from './components/Help';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
             <Route path='/news' element={<News_Body/>} />
             <Route path='/about' element={<About/>} />
             <Route path='/login' element={<Login/>} />
+             <Route path="/help" element={<Help/>} />
             <Route path='/register' element={<Register/>} />
             <Route path='/subscribe' element={<SubscriptionPage />} />
           </Routes>

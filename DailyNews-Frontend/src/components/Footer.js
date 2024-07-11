@@ -14,7 +14,7 @@ function Footer() {
         <div className="container p-5 pb-0">
           <p>
             Need some help
-            <Link to="/about" className="help-link">
+            <Link to="/help" className="help-link">
               Click here
             </Link>
           </p>
