@@ -49,7 +49,7 @@ function App_Header() {
                 <Link className="nav-link" to="/subscribe">Subscription</Link>
               </li>
             </ul>
-              <Form className="d-flex">
+              {/* <Form className="d-flex">
             <Form.Control
               style={{width:'55vh'}}
               type="search"
@@ -58,7 +58,7 @@ function App_Header() {
               aria-label="Search"
             />
             <Button variant="outline-success">Search</Button>
-          </Form>
+          </Form> */}
             </div>
               )
              }
