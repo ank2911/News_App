@@ -7,6 +7,7 @@ import Login from './components/Login'
 import Register from './components/Register'
 import AuthProvider from './context/AuthContext';
 import SubscriptionPage from './components/SubscriptionPage';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -23,9 +24,10 @@ function App() {
             <Route path='/register' element={<Register/>} />
             <Route path='/subscribe' element={<SubscriptionPage />} />
           </Routes>
+          <Footer />
       </Router> 
+      
     </AuthProvider>
-       
     </>
   );
 }

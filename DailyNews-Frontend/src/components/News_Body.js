@@ -51,7 +51,7 @@ function News_Body() {
             </Form>
           </Col> */}
 
-          <Col xs={1} md={2}>
+          {/* <Col xs={1} md={2}>
             <DropdownButton title="Select Country" onSelect={handleCountrySelect} variant='success'>
               <Dropdown.Item eventKey="in"> <b>India</b> </Dropdown.Item>
               <Dropdown.Item eventKey="us"> <b>United States</b> </Dropdown.Item>
@@ -60,16 +60,16 @@ function News_Body() {
               <Dropdown.Item eventKey="cn"> <b>China</b> </Dropdown.Item>
               <Dropdown.Item eventKey="br"> <b>Brazil</b> </Dropdown.Item>
             </DropdownButton>
-          </Col>
+          </Col> */}
 
-          <Col xs={1} md={2}>
-            {/* <DropdownButton title="Newsletter" onSelect={handleCountrySelect} variant='success'>
+          {/* <Col xs={1} md={2}>
+            <DropdownButton title="Newsletter" onSelect={handleCountrySelect} variant='success'>
               <Dropdown.Item eventKey="in"> <b>Online</b> </Dropdown.Item>
               <Dropdown.Item eventKey="us"> <b>Hard Copy</b> </Dropdown.Item>
               <Dropdown.Item eventKey="au"> <b>Both Online & Hard Copy</b> </Dropdown.Item>
-            </DropdownButton> */}
+            </DropdownButton>
             <CustomDropdown />
-          </Col>
+          </Col> */}
         </Row>
 
 

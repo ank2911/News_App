@@ -35,9 +35,9 @@ function App_Header() {
               <li className="nav-item">
                 <Link className="nav-link" to="/news">News</Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/about">About</Link>
-              </li>
+              </li> */}
              {
               auth.isAuthenticated && (
                 <div className='navbar-link'>
