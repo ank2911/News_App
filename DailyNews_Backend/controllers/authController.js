@@ -6,7 +6,7 @@ dotenv.config();
 
 // register
 exports.registerFunction = async (req, res) => {
-  const { name, email, password, address } = req.body;
+  const { name, email, password, phoneNumber, address } = req.body;
 
   try {
     let user = await User.findOne({ email });
@@ -22,6 +22,7 @@ exports.registerFunction = async (req, res) => {
       name: name,
       email: email,
       password: hashPassword,
+      phoneNumber: phoneNumber,
       address: address,
     });
 
