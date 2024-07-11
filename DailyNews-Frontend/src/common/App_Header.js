@@ -38,6 +38,9 @@ function App_Header() {
               <li className="nav-item">
                 <Link className="nav-link" to="/about">About</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/help">Help?</Link>
+              </li>
              {
               auth.isAuthenticated && (
                 <div className='navbar-link'>
