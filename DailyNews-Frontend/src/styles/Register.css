@@ -68,4 +68,17 @@
     text-align: center;
     margin: 10px 0;
   }
+  .additional-options{
+    background-color: transparent; /* Set a transparent background */
+    color: #007bff; /* Blue color for text */
+    margin-top: -5px;
+  }
+  .additional-options  {
+  
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #007bff;
+  }
   

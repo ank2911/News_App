@@ -28,13 +28,20 @@ const Login = () => {
     }
   };
 
+  const handleForgotPassword = () => {
+    navigate("/forgot-password");
+  };
+
+  const handleRegister = () => {
+    navigate("/register");
+  };
+
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
-        
         <h2><b>Login</b></h2>
         {error && <p className="login-error">{error}</p>}
-        
+
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -44,6 +51,7 @@ const Login = () => {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
+
         <label htmlFor="password">Password:</label>
         <input
           type="password"
@@ -53,8 +61,19 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+
         <button type="submit">Login</button>
+         <div className="additional-options">
+        <button className="forgot-password" onClick={handleForgotPassword}>
+          Forgot Password?
+        </button>
+        <button className="register" onClick={handleRegister}>
+          Register
+        </button>
+      </div>
       </form>
+
+     
     </div>
   );
 };

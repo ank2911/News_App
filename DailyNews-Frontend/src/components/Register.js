@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "../styles/Register.css";
 
 function Register() {
@@ -8,7 +9,7 @@ function Register() {
   const [password, setPassword] = useState("");
   const [retypePassword, setRetypePassword] = useState("");
   const [address, setAddress] = useState("");
-
+  const navigate = useNavigate();
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const [passwordsMatch, setPasswordsMatch] = useState(true); // State to track if passwords match
@@ -18,13 +19,18 @@ function Register() {
     setPasswordsMatch(password === retypePassword);
   }, [password, retypePassword]);
 
+  const handleLogin= () => {
+    navigate("/login");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!passwordsMatch) {
       setError("Passwords do not match");
       return;
     }
-    try {
+  
+    try  {
       const response = await axios.post("http://localhost:5000/register", {
         name,
         email,
@@ -107,6 +113,11 @@ function Register() {
         />
 
         <button type="submit">Register</button>
+        <div className="additional-options">
+        <span className="login" onClick={handleLogin}>
+          Login
+          </span>
+          </div>
       </form>
     </div>
   );
