@@ -94,7 +94,7 @@ function Register() {
         />
         
         {/* Display password match status */}
-        {!passwordsMatch && <p style={{ color: 'red' }}>Passwords do not match</p>}
+        {!passwordsMatch && <p style={{ color: 'red', marginBottom: '0px'}}>Passwords do not match</p>}
 
         <label htmlFor="address">Address:</label>
         <input
