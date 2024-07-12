@@ -24,7 +24,11 @@ const Home = () => {
         </p>
         <div className="d-grid gap-3 d-sm-flex justify-content-sm-center">
           <button type="button" onClick={navigateToNews} className="btn btn-primary btn-lg px-4 gap-3">Getting Started</button>
+<<<<<<< HEAD
           
+=======
+        
+>>>>>>> 65e3ae2c5d238518cd5b250b4e0b4bcfaa82488d
         </div>
       </div>
 

@@ -4,6 +4,9 @@ import { Navbar,Container,Form,Button} from "react-bootstrap";
 import { AuthContext } from '../context/AuthContext';
 import  '../styles/App_Header.css'
 
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
 function App_Header() {
 
   const date  = new Date();
@@ -72,8 +75,15 @@ function App_Header() {
           
           {auth.isAuthenticated ? (
             <>
+              {/* <span className="nav-item welcome-text">Welcome, {auth.user?.name}</span>
+              <button className="btn btn-outline-danger" onClick={handleLogout}>Logout</button> */}
               <span className="nav-item welcome-text">Welcome, {auth.user?.name}</span>
-              <button className="btn btn-outline-danger" onClick={handleLogout}>Logout</button>
+              <DropdownButton id="dropdown-basic-button" title="Profile">
+                <Dropdown.Item href="#/">Edit Profile</Dropdown.Item>
+                <Button variant="outline-primary" onClick={handleLogout}>Logout</Button>
+                <Dropdown.Item></Dropdown.Item>
+                <Dropdown.Item></Dropdown.Item>
+              </DropdownButton>
             </>
             
           ) : (
