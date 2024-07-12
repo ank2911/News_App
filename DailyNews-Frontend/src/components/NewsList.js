@@ -57,12 +57,12 @@ const NewsList = ({category, searchTerm, country}) => {
       <Row>
         {currentArticles?.map((article) => (
           <Col xs={12} md={5} lg={4} key={article.url}>
-            <Card className="card" style={{height:'350px', borderRadius:'20px'}}>
-              <Card.Img style={{height:'165px',borderRadius:'20px'}} className="cardimage" src={article.urlToImage || defaultImg} variant="top"/>
+            <Card className="card" style={{height:'230px', borderRadius:'20px'}}>
+              <Card.Img style={{height:'90px',borderRadius:'20px'}} className="cardimage" src={article.urlToImage || defaultImg} variant="top"/>
               <Card.Body>
-                <Card.Title style={{fontSize:'19px'}}>{`${article.title?.slice(0, 40) || 'No title available'}...`}</Card.Title>
-                <Card.Text>{`${article.description?.slice(0, 40) || 'No description available'}...`}</Card.Text>
-                <a href={article.url} target='_blank' rel="noopener noreferrer" className="btn btn-outline-primary read-more-btn">
+                <Card.Title style={{fontSize:'14px'}}>{`${article.title?.slice(0, 40) || 'No title available'}...`}</Card.Title>
+                <Card.Text style={{fontSize:'12px'}}>{`${article.description?.slice(0, 40) || 'No description available'}...`}</Card.Text>
+                <a href={article.url} target='_blank' rel="noopener noreferrer" className="btn btn-outline-primary read-more-btn" style={{fontSize:'0.7rem'}}>
                   Read More
                 </a>
               </Card.Body>

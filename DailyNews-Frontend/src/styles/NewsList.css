@@ -14,8 +14,14 @@
     width:252px;
 }
 
+/* .btn{
+    --bs-btn-font-size: 0.5rem;
+    background-color: red;
+} */
 .read-more-btn{
     position: absolute;
+    width: 5rem;
     bottom: 12px;
     left: 10px;
+    background-color: red;
 }
