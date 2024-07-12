@@ -83,7 +83,7 @@ function News_Body() {
           </div>
         </section>
         {/* Search row & Country selection row */}
-        <Row className="justify-content-center px-4 py-4">
+        <Row className="justify-content-center px-4">
           {/* <Col xs={8} md={6}>
             <Form onSubmit={handleSearch} className="d-flex">
               <FormControl type="text" placeholder="Search" className="me-3 form-control-sm" name="search" />

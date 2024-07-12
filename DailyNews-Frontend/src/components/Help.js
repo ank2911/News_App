@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../styles/Help.css";
 
 const Help = () => {
+   useEffect(() => {
+     window.scrollTo({top:0, behavior:'smooth'});
+   },[]);
     const[email,setEmail]=useState("")
     const[text,setText]=useState("")
     const[toggle,setToggle]=useState(true)
