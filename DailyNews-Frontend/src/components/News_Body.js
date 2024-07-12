@@ -1,27 +1,35 @@
 import React, { useContext, useEffect, useState } from "react";
 import NewsList from "./NewsList";
-import '../styles/News_Body.css';
-import { AuthContext } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
-import { Row, Col, Nav, Form, FormControl, Button, Container,Dropdown, DropdownButton} from "react-bootstrap";
+import "../styles/News_Body.css";
+import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import {
+  Row,
+  Col,
+  Nav,
+  Form,
+  FormControl,
+  Button,
+  Container,
+  Dropdown,
+  DropdownButton,
+} from "react-bootstrap";
 import CustomDropdown from "./CutomDropdown";
 
 function News_Body() {
-
   const { auth } = useContext(AuthContext);
   const navigate = useNavigate();
 
   // checking first , wheather user is registered and logged in or not
   useEffect(() => {
     if (!auth.isAuthenticated) {
-      navigate('/login');
+      navigate("/login");
     }
   }, [auth, navigate]);
 
-
   const [category, setCategory] = useState("general");
   const [searchTerm, setSearchTerm] = useState("");
-  const [country, setCountry] = useState('in');
+  const [country, setCountry] = useState("in");
   const handleCategoryClick = (cetegory) => {
     setCategory(cetegory);
     setSearchTerm("");
@@ -33,16 +41,48 @@ function News_Body() {
     setSearchTerm(event.target.search.value);
   };
 
-  const handleCountrySelect = (selectedCountry)=>{
+  const handleCountrySelect = (selectedCountry) => {
     setCountry(selectedCountry);
     setSearchTerm("");
-  }
+  };
 
   return (
     <>
-    <div className="news-body">
-
-      {/* Search row & Country selection row */}
+      <div className="news-body">
+        <section class="marquees-wrapper">
+          <div class="marquee marquee-1">
+            <ul class="marquee__content scroll">
+              <li>BREAKING NEWS</li>
+              <li>&#183;</li>
+              <li>CURRENT UPDATES AT YOUR FINGERTIPS</li>
+              <li>&#183;</li>
+              <li>BREAKING NEWS</li>
+              <li>&#183;</li>
+              <li>CURRENT UPDATES AT YOUR FINGERTIPS</li>
+              <li>&#183;</li>
+              <li>BREAKING NEWS</li>
+              <li>&#183;</li>
+              <li>CURRENT UPDATES AT YOUR FINGERTIPS</li>
+              <li>&#183;</li>
+            </ul>
+            {/* <!-- Mirrors the content above --> */}
+            <ul class="marquee__content scroll" aria-hidden="true">
+              <li>BREAKING NEWS</li>
+              <li>&#183;</li>
+              <li>CURRENT UPDATES AT YOUR FINGERTIPS</li>
+              <li>&#183;</li>
+              <li>BREAKING NEWS</li>
+              <li>&#183;</li>
+              <li>CURRENT UPDATES AT YOUR FINGERTIPS</li>
+              <li>&#183;</li>
+              <li>BREAKING NEWS</li>
+              <li>&#183;</li>
+              <li>CURRENT UPDATES AT YOUR FINGERTIPS</li>
+              <li>&#183;</li>
+            </ul>
+          </div>
+        </section>
+        {/* Search row & Country selection row */}
         <Row className="justify-content-center px-4 py-4">
           {/* <Col xs={8} md={6}>
             <Form onSubmit={handleSearch} className="d-flex">
@@ -72,30 +112,61 @@ function News_Body() {
           </Col> */}
         </Row>
 
-
-      {/* Category & News Body row*/}
+        {/* Category & News Body row*/}
         <Container>
-          <Row >
-            <Col style={{marginTop:'15px'}} xs={12} md={3} lg={2} className="categories-sidebar">
-              <h4 style={{marginLeft:'15px'}}><b>Categories</b></h4>
+          <Row>
+            <Col
+              style={{ marginTop: "15px" }}
+              xs={12}
+              md={3}
+              lg={2}
+              className="categories-sidebar"
+            >
+              <h4 style={{ marginLeft: "15px" }}>
+                <b>Categories</b>
+              </h4>
               <Nav className="flex-column ">
-                <Nav.Link onClick={() => handleCategoryClick("general")}> General</Nav.Link>
-                <Nav.Link onClick={() => handleCategoryClick("business")}> Business</Nav.Link>
-                <Nav.Link onClick={() => handleCategoryClick("technology")}> Technology</Nav.Link>
-                <Nav.Link onClick={() => handleCategoryClick("sports")}> Sports</Nav.Link>
-                <Nav.Link onClick={() => handleCategoryClick("entertainment")}> Entertainment </Nav.Link>
-                <Nav.Link onClick={() => handleCategoryClick("health")}> Health </Nav.Link>
-                <Nav.Link onClick={() => handleCategoryClick("science")}> Science </Nav.Link>
+                <Nav.Link onClick={() => handleCategoryClick("general")}>
+                  {" "}
+                  General
+                </Nav.Link>
+                <Nav.Link onClick={() => handleCategoryClick("business")}>
+                  {" "}
+                  Business
+                </Nav.Link>
+                <Nav.Link onClick={() => handleCategoryClick("technology")}>
+                  {" "}
+                  Technology
+                </Nav.Link>
+                <Nav.Link onClick={() => handleCategoryClick("sports")}>
+                  {" "}
+                  Sports
+                </Nav.Link>
+                <Nav.Link onClick={() => handleCategoryClick("entertainment")}>
+                  {" "}
+                  Entertainment{" "}
+                </Nav.Link>
+                <Nav.Link onClick={() => handleCategoryClick("health")}>
+                  {" "}
+                  Health{" "}
+                </Nav.Link>
+                <Nav.Link onClick={() => handleCategoryClick("science")}>
+                  {" "}
+                  Science{" "}
+                </Nav.Link>
               </Nav>
             </Col>
 
             <Col xs={12} md={9}>
-              <NewsList category={category} searchTerm={searchTerm} country={country} />          {/* NewsList Component */}
+              <NewsList
+                category={category}
+                searchTerm={searchTerm}
+                country={country}
+              />{" "}
+              {/* NewsList Component */}
             </Col>
-
           </Row>
         </Container>
-        
       </div>
     </>
   );
