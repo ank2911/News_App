@@ -12,7 +12,7 @@ function Footer() {
       >
         <div className="container p-5 pb-0">
           <p>
-            Need some help
+            Need some help?
             <Link to="/help" className="help-link">
               Click here
             </Link>
