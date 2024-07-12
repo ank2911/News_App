@@ -23,9 +23,8 @@ const Home = () => {
           At Daily Insight News, we bring you breaking news, in-depth analysis, and insightful commentary on the most pressing issues of our time.
         </p>
         <div className="d-grid gap-3 d-sm-flex justify-content-sm-center">
-          <button type="button" onClick={navigateToNews} className="btn btn-primary btn-lg px-4 gap-3">Getting Started</button>
-        
-        </div>
+          <button type="button" onClick={navigateToNews} className="btn btn-primary btn-lg px-4 gap-3">Getting Started</button> 
+          </div>
       </div>
 
   </div>

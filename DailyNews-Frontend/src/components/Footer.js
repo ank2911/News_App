@@ -8,12 +8,11 @@ function Footer() {
   return (
     <div>
       <footer
-        className="text-center text-white"
-        style={{ backgroundColor: "#000000" }}
+        className="text-center text-white footer"
       >
         <div className="container p-5 pb-0">
           <p>
-            Need some help
+            Need some help?
             <Link to="/help" className="help-link">
               Click here
             </Link>

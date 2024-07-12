@@ -70,6 +70,7 @@ const NewsList = ({category, searchTerm, country}) => {
           </Col>
         ))}
       </Row>
+      
 
       <CustomPagination currentPage={currentPage} totalPages={totalPages} onPageChange={onPageChange} />
 

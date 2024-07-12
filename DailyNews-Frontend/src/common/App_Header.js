@@ -43,7 +43,7 @@ function App_Header() {
               </li> */}
               
               <li className="nav-item">
-                <Link className="nav-link" to="/help">Help?</Link>
+                <Link className="nav-link" to="/help">Help</Link>
               </li>
              {
               auth.isAuthenticated && (

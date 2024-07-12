@@ -11,7 +11,7 @@ const useNewsData = (category, searchTerm, country) => {
       try {
         setLoading(true);
         
-        const apiUrl = `https://newsapi.org/v2/top-headlines?apiKey=166af9fca6ce44f2aff644f689c8668a`;
+        const apiUrl = `https://newsapi.org/v2/top-headlines?apiKey=1595ba38d2d0488f845d4d73f20d3d4c`;
 
         const countryParam = country ? `&country=${country}` : "";
         const categoryParam = category ? `&category=${category}` : "";

@@ -17,7 +17,7 @@ const Help = () => {
     toggle?
 <div className="help-container">
       <form className="help-form" onSubmit={handleSubmit}>
-        <h2><b>Help?</b></h2> 
+        <h2><b>Help</b></h2> 
         <label htmlFor="email">Email:</label>
         <input
           type="email"
