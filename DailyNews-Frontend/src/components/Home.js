@@ -24,7 +24,7 @@ const Home = () => {
         </p>
         <div className="d-grid gap-3 d-sm-flex justify-content-sm-center">
           <button type="button" onClick={navigateToNews} className="btn btn-primary btn-lg px-4 gap-3">Getting Started</button>
-          <button type="button" className="btn btn-outline-secondary btn-lg px-4">Contact-Us</button>
+          
         </div>
       </div>
 
