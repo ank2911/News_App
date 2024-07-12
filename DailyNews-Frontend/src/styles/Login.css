@@ -50,13 +50,8 @@
     margin-bottom: 30px;
   }
   
-<<<<<<< HEAD
-  .login-form button :hover {
-    background-color: #45a049;
-=======
   .login-form button:hover {
     background-color: #007bff ;
->>>>>>> f88cd4eb85d0ae51b1ce32a7211859d152ffea08
   }
   
   .login-error {
