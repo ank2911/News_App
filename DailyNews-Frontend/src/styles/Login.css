@@ -5,7 +5,6 @@
     align-items: center;
     height: 91vh;
     background-color: #f0f0f0;
-
     background-image: url('../assests/img1.jpg');
     background-size: cover;
     background-position: center;
@@ -21,7 +20,7 @@
   
   .login-form h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .login-form label {
@@ -47,11 +46,10 @@
     border-radius: 4px;
     cursor: pointer;
     margin-top: 20px;
-    margin-bottom: 30px;
   }
   
   .login-form button:hover {
-    background-color: #007bff ;
+    background-color: #0056b3;
     color: white;
   }
   
@@ -67,22 +65,12 @@
   
 
   
-  .additional-options .forgot-password {
-    background-color: transparent; /* Set a transparent background */
-    color: #007bff; /* Blue color for text */
+  .additional-options button {
+    background-color: transparent; 
+    color: #007bff; 
   }
-  
-  .additional-options .register {
-    background-color: transparent; /* Set a transparent background */
-    color: #007bff; /* Blue color for text */
+  .additional-options button:hover{
+    background-color:  #007bff; 
+    color: white;
   }
-  
-.forgot-password,
-.register {
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 14px;
-
-}
-
+ 

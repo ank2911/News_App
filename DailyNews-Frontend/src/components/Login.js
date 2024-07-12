@@ -64,10 +64,10 @@ const Login = () => {
 
         <button type="submit">Login</button>
          <div className="additional-options">
-        <button className="forgot-password" onClick={handleForgotPassword}>
+        <button  onClick={handleForgotPassword}>
           Forgot Password?
         </button>
-        <button className="register" onClick={handleRegister}>
+        <button onClick={handleRegister}>
           Register
         </button>
       </div>
