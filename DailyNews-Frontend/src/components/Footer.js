@@ -10,7 +10,7 @@ function Footer() {
       <footer
         className="text-center text-white footer"
       >
-        <div className="container p-5 pb-0">
+        {/* <div className="container p-5 pb-0">
           <p>
             Need some help?
             <Link to="/help" className="help-link">
@@ -44,7 +44,7 @@ function Footer() {
               </div>
             </form>
           </section>
-        </div>
+        </div> */}
 
         <div className="text-center p-3">
           Copyright © {currentYear} Daily News, Tech Mahindra. All rights
