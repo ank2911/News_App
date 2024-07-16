@@ -6,6 +6,7 @@
     cursor: pointer;
 }
 .footer{
+    position: sticky;
     background: #18284d;
     
 }

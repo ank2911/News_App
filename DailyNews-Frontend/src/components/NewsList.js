@@ -1,8 +1,9 @@
 import { useState,useEffect } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { ThreeDots } from 'react-loader-spinner'
 import useNewsData from "../hooks/useNewsData";
 import CustomPagination from "./CustomPagination";
-import defaultImg from '../assests/defaultImage.png'
+import defaultImg from '../assests/sample-img.jpg'
 import '../styles/NewsList.css'
 import SubscriptionPopup from "./SubscriptionPopup";
 const NewsList = ({category, searchTerm, country}) => {
@@ -37,7 +38,16 @@ const NewsList = ({category, searchTerm, country}) => {
   const { newsData, loading, error } = useNewsData(category, searchTerm, country);           //custom hook
 
   if (loading) {
-    return <div>Loading...⏳</div>;
+    return <ThreeDots
+    visible={true}
+    height="80"
+    width="80"
+    color="black"
+    radius="9"
+    ariaLabel="three-dots-loading"
+    wrapperClass="loader"
+    />
+    // <div>Loading...⏳</div>;
   }
 
   if (error) {
