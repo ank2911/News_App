@@ -1,15 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import "../styles/Help.css";
+import { AuthContext } from '../context/AuthContext';
 
 const Help = () => {
    useEffect(() => {
      window.scrollTo({top:0, behavior:'smooth'});
    },[]);
-    const[email,setEmail]=useState("")
+   const[email,setEmail]=useState("")
     const[text,setText]=useState("")
     const[toggle,setToggle]=useState(true)
     const [phoneNumber, setPhoneNumber] = useState("");
     const [validPhoneNumber, setValidPhoneNumber] = useState(true);
+    const {auth}=useContext(AuthContext)
+    useEffect(()=>{
+      if(auth.isAuthenticated)
+      {
+        setEmail(auth.user?.email);
+        setPhoneNumber(auth.user?.phone)
+      }
+    },[])
+   
+
     const handleSubmit=()=>{
        setToggle(false)
     }
